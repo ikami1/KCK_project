@@ -7,10 +7,7 @@ def showLiveCam():
 
     ret, first_frame = cap.read()
 
-    rectangles = []
-    from_center = False
-    cv2.selectROI("Image", first_frame, rectangles, from_center)
-    # r = cv2.selectROI("ROI to track", first_frame, False)
+    r = cv2.selectROI("ROI to track", first_frame, False)
 
     while():
         # Capture frame-by-frame
