@@ -1,11 +1,16 @@
 import numpy as np
 import cv2
+from video import showLiveCam
+from motion_detection_grey import motion_detection
 
 
 if __name__ == '__main__':
     print("Elo w projekcie, przykład zastosowania BackProjection ~ikami")
 
-    img_part = cv2.imread('trolltunga_river.jpg')
+    showLiveCam()
+    # motion_detection()
+
+    '''img_part = cv2.imread('trolltunga_river.jpg')
     hsv_part = cv2.cvtColor(img_part, cv2.COLOR_BGR2HSV)
 
     img_target = cv2.imread('trolltunga.jpg')
@@ -29,4 +34,4 @@ if __name__ == '__main__':
     res = cv2.bitwise_and(img_target, thresh)
 
     res = np.vstack((img_target, thresh, res))
-    cv2.imwrite('res.jpg', res)
+    cv2.imwrite('res.jpg', res)'''
