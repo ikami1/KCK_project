@@ -10,7 +10,12 @@ def liveCamTracking():
         print("Not opened")
         return
 
-    cv2.waitKey(1000)
+    while True:
+        ret, frame = cap.read()
+        cv2.imshow('Press Q when ready to select ROI', frame)
+        if cv2.waitKey(1) & 0xFF == ord('q'):
+            break
+    cv2.destroyAllWindows()
     ret, first_frame = cap.read()
 
     if not ret:
@@ -26,7 +31,7 @@ def liveCamTracking():
     cv2.imshow("Image to track", img_crop)
 
     hsv_crop = cv2.cvtColor(img_crop, cv2.COLOR_BGR2HSV)
-    mask = cv2.inRange(hsv_crop, np.array((0., 60., 32.)), np.array((180., 255., 255.)))
+    mask = cv2.inRange(hsv_crop, np.array((0., 0., 0.)), np.array((255., 255., 255.)))
     roi_hist = cv2.calcHist([hsv_crop], [0], mask, [180], [0, 180])
     cv2.normalize(roi_hist, roi_hist, 0, 255, cv2.NORM_MINMAX)
     # Setup the termination criteria, either 10 iteration or move by atleast 1 pt

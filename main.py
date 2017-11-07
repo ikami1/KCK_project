@@ -3,8 +3,6 @@ from motion_detection_grey import motion_detection
 
 
 if __name__ == '__main__':
-    print("Elo w projekcie, przykład zastosowania BackProjection ~ikami")
-
     liveCamTracking()
     # motion_detection()
 
