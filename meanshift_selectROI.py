@@ -1,15 +1,10 @@
 import numpy as np
 import cv2
+
+
 cap = cv2.VideoCapture(0)
 # take first frame of the video
 ret,frame = cap.read()
-# setup initial location of window
-#r,h,c,w = 250,90,400,125  # simply hardcoded the values
-#track_window = (c,r,w,h)
-
-
-
-
 
 # set up the ROI for tracking
 c,r,w,h = cv2.selectROI("ROI to track",frame, False)

@@ -1,13 +1,11 @@
-import numpy as np
-import cv2
-from video import showLiveCam
+from video import liveCamTracking
 from motion_detection_grey import motion_detection
 
 
 if __name__ == '__main__':
     print("Elo w projekcie, przykład zastosowania BackProjection ~ikami")
 
-    showLiveCam()
+    liveCamTracking()
     # motion_detection()
 
     '''img_part = cv2.imread('trolltunga_river.jpg')
