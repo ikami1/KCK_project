@@ -1,9 +1,11 @@
 from video import liveCamTracking
+from KCF_Tracker import KCF_Tracking
 from motion_detection_grey import motion_detection
 
 
 if __name__ == '__main__':
-    liveCamTracking()
+    #liveCamTracking()
+    KCF_Tracking()
     # motion_detection()
 
     '''img_part = cv2.imread('trolltunga_river.jpg')
