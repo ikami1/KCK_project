@@ -23,6 +23,7 @@ def KCF_Tracking():
 
     col, row, width, height = cv2.selectROI("ROI to track", first_frame, False)
     track_window = (col, row, width, height)
+    print(track_window)
 
     # Crop image
     img_crop = first_frame[row:row + height, col:col + width]
