@@ -1,1 +1,3 @@
-# KCK_project
+# KCK_project  
+
+Motion detection with tracking
